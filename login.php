@@ -1,8 +1,7 @@
 <?php require_once('../templates/header.php'); ?>
-<link rel="stylesheet" type="text/css" href="../css/signin.css">
+<link rel="stylesheet" type="text/css" href="../css/style.css">
     <title>Sign in</title>
 </head>
-
 
 <body>
 <div class="container">
@@ -13,7 +12,6 @@
        <br> <label for="inputPassword">Password&nbsp;</label>
         <input name="Password" type="password" id="inputPassword" class="form-control" placeholder="Password" required>
         <button name="Submit" value="Login" class="button" type="submit">Sign in</button>
-
     </form>
     <?php
 
@@ -21,7 +19,6 @@
     /* isset — Determine if a variable is declared and is different than NULL*/
     if(isset($_POST['Submit']))
     {
-
         /* Check if the form's username and password matches */
         /* these currently check against variable values stored in config.php but later we will see how these can be checked against information in a database*/
         if( ($_POST['Email'] == $Email) && ($_POST['Password'] == $Password) )
@@ -32,7 +29,6 @@
             echo 'Incorrect Username or Password';
     }
     ?>
-
 </div>
 </body>
 </html>

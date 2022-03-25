@@ -8,6 +8,6 @@
     <link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
-<h1>Registration Form</h1>
+<h1></h1>
 </body>
 </html>
