@@ -8,24 +8,36 @@
 <div class="container">
     <form action="" method="post" name="Login_Form" class="form-signin">
         <h2 class="form-signin-heading">Please sign in</h2>
-        <label for="inputEmail" >Email&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
-        <input name="Email" type="email" id="inputEmail" class="form-control" placeholder="Email" required autofocus>
+        <label for="email" >Email&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
+        <input name="email" type="email" id="email" class="form-control" placeholder="email" required autofocus>
         <br> <label for="inputPassword">Password&nbsp;</label>
-        <input name="Password" type="password" id="inputPassword" class="form-control" placeholder="Password" required>
-        <button name="Submit" value="Login" class="button" type="submit">Sign in</button>
+        <input name="password" type="password" id="inputPassword" class="form-control" placeholder="Password" required>
+        <button name="submit" value="Login" class="button" type="submit">Sign in</button>
     </form>
     <?php
 
-    if(isset($_POST['Submit']))
-    {
-        if( ($_POST['Email'] == $Email) && ($_POST['Password'] == $Password) )
-        {
-            echo 'Success';
+    if (isset($_POST['submit'])) {
+        try {
+            require_once '../SRC/connectDB.php';
+            $sql = "SELECT * FROM users WHERE email = :email";
+            $email = $_POST['email'];
+
+            $statement = $connection->prepare($sql);
+            $statement->bindParam(':email', $email, PDO::PARAM_STR);
+            $statement->execute();
+            $result = $statement->fetchAll();
         }
-        else
-            echo 'Incorrect Username or Password';
+        catch(PDOException $error) {
+            echo $sql . "<br>" . $error->getMessage();
+        }
     }
-    ?>
+    if (isset($_POST['submit'])) {
+        if ($result && $statement->rowCount() > 0) {
+            ?> User successfully logged in!!! <?php }
+        else {
+            ?> Incorrect Credentials!!!
+        <?php }
+    } ?>
 </div>
 </body>
 </html>
