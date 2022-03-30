@@ -1,5 +1,5 @@
 <?php include "../templates/header.php"; ?>
-
+    <link rel="stylesheet" type="text/css" href="../css/style.css">
 <?php if (isset($_POST['submit']) && $statement) {?>
     <?php echo escape($_POST['firstname']); ?> successfully added.
 <?php } ?>
@@ -37,7 +37,8 @@ if (isset($_POST['submit'])) {
         <label for="email">Email Address</label>
         <input type="email" name="email" id="email" required>
         <label for="password">Password</label>
-        <input type="password" name="password" id="password" required>
+        <input type="password" name="password" id="password" required><br>
         <input type="submit" name="submit" value="Submit">
     </form>
+    <a href="login.php">Already a User?</a><br>
 <?php include "../templates/footer.php"; ?>
