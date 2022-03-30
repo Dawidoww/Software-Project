@@ -2,12 +2,12 @@
 
 class Transaction
 {
-    private int $orderID;
+    private int $transactionID;
     private float $amountPayed;
 
-    public function __construct($orderID,$amountPayed)
+    public function __construct($transactionID,$amountPayed)
     {
-        $this->orderID = $orderID;
+        $this->transactionID = $transactionID;
         $this->amountPayed = $amountPayed;
     }
     public function getAmountPayed(): float
@@ -19,16 +19,16 @@ class Transaction
         $this->amountPayed = $amountPayed;
     }
 
-    public function getOrderID(): int
+    public function getTransactionID(): int
     {
-        return $this->orderID;
+        return $this->transactionID;
     }
-    public function setOrderID(int $orderID): void
+    public function setTransactionID(int $transactionID): void
     {
-        $this->orderID = $orderID;
+        $this->transactionID = $transactionID;
     }
     public function storeTransaction()
     {
-        echo "The Transaction of order ($this->orderID) of price £$this->amountPayed will be stored in our System.\n";
+        echo "The Transaction of order ($this->transactionID) of price £$this->amountPayed will be stored in our System.\n";
     }
 }
