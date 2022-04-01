@@ -1,6 +1,5 @@
 <?php require_once('../templates/header.php'); ?>
 <link rel="stylesheet" type="text/css" href="../css/style.css">
-<link rel="stylesheet" type="text/css" href="css/style.css">
     <title>Sign in</title>
 </head>
 
