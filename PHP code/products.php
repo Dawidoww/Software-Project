@@ -1,14 +1,12 @@
 <?php
 require "../PHP code/functions.php";
-if (isset($_GET["planName"])) {
+if (isset($_POST['choose'])) {
     try {
         require_once '../SRC/connectDB.php';
-        $planName = $_GET["planName"];
-        $sql = "DELETE FROM plans WHERE planName = :planName ";
+
+        $sql = "INSERT INTO basket VALUES ( 49.99,'Power Up' )";
         $statement = $connection->prepare($sql);
-        $statement->bindValue(':planName', $planName);
         $statement->execute();
-        $success = "Plan successfully deleted";
     } catch(PDOException $error) {
         echo $sql . "<br>" . $error->getMessage();
     }
@@ -24,7 +22,7 @@ try {
 }
 ?>
 <?php require "../templates/header.php"; ?>
-<h2>Delete plans</h2>
+<h2>Add plans to basket</h2>
 <?php if ($success) echo $success; ?>
 <table>
     <thead>
@@ -33,24 +31,23 @@ try {
         <th>Plan Type</th>
         <th>Description</th>
         <th>Price</th>
-        <th>Update</th>
-        <th>Delete</th>
-
     </tr>
     </thead>
+    <form method="post">
     <tbody>
     <?php foreach ($result as $row) : ?>
         <tr>
-            <td><?php echo escape($row["planName"]); ?></td>
+            <td><?php echo $row["planName"]; ?></td>
             <td><?php echo escape($row["type"]); ?></td>
             <td><?php echo escape($row["description"]); ?></td>
             <td><?php echo escape($row["price"]); ?></td>
-            <td><a href="deletePlans.php?planName=<?php echo escape($row["planName"]);
-                ?>">Delete</a></td>
+            <td><input type="submit" name="choose" value="Choose"></td>
         </tr>
     <?php endforeach; ?>
     </tbody>
+    </form>
 </table>
 <?php require "../templates/footer.php"; ?>
+
 
 

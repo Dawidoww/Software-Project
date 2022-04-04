@@ -21,6 +21,7 @@ if (isset($_POST['submit'])) {
         echo $sql . "<br>" . $error->getMessage();
     }
 }
+
 ?>
 <form method="post">
     <input type="submit" name="submit" value="Submit">

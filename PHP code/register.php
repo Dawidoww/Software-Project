@@ -3,9 +3,7 @@
 <?php if (isset($_POST['submit']) && $statement) {?>
     <?php echo escape($_POST['firstname']); ?> successfully added.
 <?php } ?>
-
     <h2 class="register" "">Register User</h2>
-
 <?php
 if (isset($_POST['submit'])) {
     try {
@@ -29,18 +27,18 @@ if (isset($_POST['submit'])) {
 if (isset($_POST['submit'])) {
     try {
         require_once '../SRC/connectDB.php';
-        $new_user1 = array(
+        $new_customer1 = array(
             "name" => $_POST['firstname'],
             "surname" => $_POST['lastname']
         );
         $sql = sprintf(
             "INSERT INTO %s (%s) values (%s)",
             "customer",
-            implode(", ", array_keys($new_user1)),
-            ":" . implode(", :", array_keys($new_user1))
+            implode(", ", array_keys($new_customer1)),
+            ":" . implode(", :", array_keys($new_customer1))
         );
         $statement = $connection->prepare($sql);
-        $statement->execute($new_user1);
+        $statement->execute($new_customer1);
     } catch(PDOException $error) {
         echo $sql . "<br>" . $error->getMessage();
     }
