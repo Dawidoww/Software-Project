@@ -73,7 +73,10 @@ li {
     background-color: #088BD3;
     color: white;
 }
-
+.register{
+    color: red;
+    background-color: black;
+}
 /* Supporting marketing content */
 .marketing {
     margin: 40px 0;

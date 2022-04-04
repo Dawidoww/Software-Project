@@ -4,7 +4,7 @@
     <?php echo escape($_POST['firstname']); ?> successfully added.
 <?php } ?>
 
-    <h2>Register User</h2>
+    <h2 class="register" "">Register User</h2>
 
 <?php
 if (isset($_POST['submit'])) {
