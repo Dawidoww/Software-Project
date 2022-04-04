@@ -9,3 +9,11 @@ CREATE TABLE users (
     password VARCHAR(50)
 );
 
+CREATE TABLE `Plans` (
+                         `planName` VARCHAR(45),
+                         `type` VARCHAR(45),
+                         `description` VARCHAR(45),
+                         `price` FLOAT
+);
+
+
