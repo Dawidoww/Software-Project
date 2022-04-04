@@ -1,5 +1,5 @@
-CREATE DATABASE fitness;
-    use fitness;
+CREATE DATABASE fit;
+    use fit;
 
 CREATE TABLE users (
     id INT(11) UNSIGNED AUTO_INCREMENT PRIMARY KEY,

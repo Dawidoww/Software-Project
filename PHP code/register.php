@@ -11,19 +11,36 @@ if (isset($_POST['submit'])) {
     try {
         require_once '../SRC/connectDB.php';
         $new_user = array(
-            "firstname" => $_POST['firstname'],
-            "lastname" => $_POST['lastname'],
             "email" => $_POST['email'],
-            "password" => $_POST['password'],
+            "password" => $_POST['password']
         );
         $sql = sprintf(
             "INSERT INTO %s (%s) values (%s)",
-            "users",
+            "user",
             implode(", ", array_keys($new_user)),
             ":" . implode(", :", array_keys($new_user))
         );
         $statement = $connection->prepare($sql);
         $statement->execute($new_user);
+    } catch(PDOException $error) {
+        echo $sql . "<br>" . $error->getMessage();
+    }
+}
+if (isset($_POST['submit'])) {
+    try {
+        require_once '../SRC/connectDB.php';
+        $new_user1 = array(
+            "name" => $_POST['firstname'],
+            "surname" => $_POST['lastname']
+        );
+        $sql = sprintf(
+            "INSERT INTO %s (%s) values (%s)",
+            "customer",
+            implode(", ", array_keys($new_user1)),
+            ":" . implode(", :", array_keys($new_user1))
+        );
+        $statement = $connection->prepare($sql);
+        $statement->execute($new_user1);
     } catch(PDOException $error) {
         echo $sql . "<br>" . $error->getMessage();
     }

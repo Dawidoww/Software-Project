@@ -1,10 +1,10 @@
-CREATE DATABASE tables;
-use tables;
+CREATE DATABASE Critical_Fitness;
+use Critical_Fitness;
 
 CREATE TABLE `Plans` (
     `planName` VARCHAR(45),
     `type` VARCHAR(45),
-    `description` VARCHAR(45),
+    `description` VARCHAR(120),
     `price` FLOAT,
     PRIMARY KEY (`planName`)
 );

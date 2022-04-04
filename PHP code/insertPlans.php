@@ -9,8 +9,12 @@
 if (isset($_POST['submit'])) {
     try {
         require_once '../SRC/connectDB.php';
+        require_once 'Plans.php';
         $sql = "INSERT INTO plans
-           VALUES ('Slimming','Slimming','********', 49.99)";
+           VALUES ('Power Up','Power Lifting', 'Great power insurgence withing a few weeks.', 49.99 ),
+           ('Transform', 'BodyBuilding', 'Wanna becvome Arnold 2.0? Choose me!!', 49.99),
+           ('The Weight Blaster', 'Slimming', 'Loose all excess fat, look more healthier and comfortable in your own body, then this plan is for YOU', 39.99),
+           ('Titan Mode', 'Bulking', 'Wanna gain some extra mass? Wanna improve your strength?If so then this plan is perfect to get your goal started', 44.99)";
         $statement = $connection->prepare($sql);
         $statement->execute();
     } catch(PDOException $error) {
