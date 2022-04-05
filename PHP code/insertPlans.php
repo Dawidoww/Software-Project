@@ -9,7 +9,7 @@
 if (isset($_POST['submit'])) {
     try {
         require_once '../SRC/connectDB.php';
-        require_once 'Plans.php';
+        require_once 'Classes/Plans.php';
         $sql = "INSERT INTO plans
            VALUES ('Power Up','Power Lifting', 'Great power insurgence withing a few weeks.', 49.99 ),
            ('Transform', 'BodyBuilding', 'Wanna becvome Arnold 2.0? Choose me!!', 49.99),

@@ -9,7 +9,7 @@
 if (isset($_POST['submit'])) {
     try {
         require_once '../SRC/connectDB.php';
-        require_once 'Promo.php';
+        require_once 'Classes/Promo.php';
         $sql = "INSERT INTO promo
            VALUES ('Easter', 20 ),('Holidays', 50)";
         $statement = $connection->prepare($sql);
