@@ -1,4 +1,5 @@
 <?php
+include "../templates/header.php";
 require "../PHP code/functions.php";
 if (isset($_POST['choose'])) {
     try {
@@ -21,7 +22,6 @@ try {
     echo $sql . "<br>" . $error->getMessage();
 }
 ?>
-<?php require "../templates/header.php"; ?>
 <h2>Add plans to basket</h2>
 <?php if ($success) echo $success; ?>
 <table>

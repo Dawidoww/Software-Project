@@ -1,0 +1,143 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+/*Set nav width and colour*/
+nav{
+    width: 100%;
+    background: black;
+}
+/*make the pages from to the right and have a margin off from right*/
+nav ul{
+    float: right;
+    margin-right: 40px;
+}
+/*display the pages in an inline block and set margin with line height*/
+nav li{
+    display: inline-block;
+    margin:  0 8px;
+    line-height: 80px;
+}
+/*set the colour of writing the font size and all the paddings*/
+/*give a border radius and make all letters uppercase*/
+nav a{
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    text-transform: uppercase;
+    padding: 7px 10px;
+    border-radius: 3px;
+}
+/*when hovered over the pages a white border should appear*/
+a.home,a:hover{
+    border: 1px solid white;
+    transition: 0.3s;
+}
+/*this is appears when the screen gets smaller*/
+/*gives colour with size with different margins and floats to right aswell*/
+/*when the cursor goes on it it should change to a pointer*/
+nav #icon{
+    color: white;
+    font-size: 30px;
+    line-height: 80px;
+    float: right;
+    margin-right: 40px;
+    margin-right: 40px;
+    cursor: pointer;
+    display: none;
+}
+/*Customise the logo of the nav bar to a certain size colour and some padding*/
+label.logo{
+    font-size: 35px;
+    font-weight: bold;
+    color: white;
+    padding: 0 100px;
+    line-height: 80px;
+}
+/*When screen goes lower that 1025px the logo will become smaller the font size will also get smaller and the different pages on the nav bar will be pushed to one of the sides a bit */
+@media only screen and (max-width: 1025px){
+    label.logo{
+        font-size: 30px;
+        padding-left: 20px;
+    }
+    nav ul{
+        margin-right: 20px;
+    }
+    nav a{
+        font-size: 17px;
+    }
+}
+/*When screen gets lower than 850px when pressed in icon it should display the list of pages in a block*/
+@media only screen and ( max-width: 850px){
+    nav #icon{
+        dssplay: block;
+    }
+    /*Set the width and height with position and background colour for the nav bar*/
+    /*Allign all text to be in centre*/
+    nav ul{
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        background: #4d0000;
+        top: 80px;
+        left: -100%;
+        text-align: center;
+        transition: .5s;
+    }
+    /*Make pages appear as a bloc and set margin and line height*/
+    nav li{
+        display: block;
+        margin: 50px 0;
+        line-height: 30px;
+    }
+    /*Set font size*/
+    nav a {
+        font-size: 20px;
+    }
+    /*set colour and border*/
+    a.active, a:hover{
+        border: none;
+        color: black;
+    }
+    /*When pressed the icon the menu should pop out from left side*/
+    nav ul.show{
+        left:  0;
+    }
+}
+/*When screen goes under 450px when pressed on the icon it should display the different pages in a block*/
+@media only screen and ( max-width: 450px){
+    nav #icon{
+        display: block;
+    }
+    /*Set the width and height with position and background colour for the nav bar*/
+    /*Allign all text to be in centre*/
+    nav ul{
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        background: #4d0000;
+        top: 80px;
+        left: -100%;
+        text-align: center;
+        transition: .5s;
+    }
+    /*Make pages appear as a bloc and set margin and line height*/
+    nav li{
+        display: block;
+        margin: 50px 0;
+        line-height: 30px;
+    }
+    /*Set font size*/
+    nav a {
+        font-size: 20px;
+    }
+    /*set colour and border*/
+    a.active, a:hover{
+        border: none;
+        color: black;
+    }
+    /*When pressed the icon the menu should pop out from left side*/
+    nav ul.show{
+        left:  0;
+    }
+}

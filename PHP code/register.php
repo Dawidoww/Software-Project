@@ -1,9 +1,9 @@
 <?php include "../templates/header.php"; ?>
-    <link rel="stylesheet" type="text/css" href="../css/style.css">
+    <link rel="stylesheet" href="../css/register.css"/>
 <?php if (isset($_POST['submit']) && $statement) {?>
     <?php echo escape($_POST['firstname']); ?> successfully added.
 <?php } ?>
-    <h2 class="register" "">Register User</h2>
+    <h2 class="register">Register User</h2>
 <?php
 if (isset($_POST['submit'])) {
     try {
@@ -45,15 +45,16 @@ if (isset($_POST['submit'])) {
 }
 ?>
     <form method="post">
-        <label for="firstname">First Name</label>
+        <label1 for="firstname">First Name</label1>
         <input type="text" name="firstname" id="firstname" required>
-        <label for="lastname">Last Name</label>
+        <label1 for="lastname">Last Name</label1>
         <input type="text" name="lastname" id="lastname" required>
-        <label for="email">Email Address</label>
+        <label1 for="email">Email Address</label1>
         <input type="email" name="email" id="email" required>
-        <label for="password">Password</label>
-        <input type="password" name="password" id="password" required><br>
-        <input type="submit" name="submit" value="Submit">
+        <label1 for="password">Password</label1>
+        <input type="password" name="password" id="password" required><br><br>
+        <button name="submit" value="Register" class="button" type="submit">Register</button>
     </form>
-    <a href="login.php">Already a User?</a><br>
+<br>
+    <a href="login.php"><button>Already a User?</button></a>
 <?php include "../templates/footer.php"; ?>

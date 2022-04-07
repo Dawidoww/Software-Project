@@ -1,0 +1,55 @@
+input[type=email]{
+    width: 40%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    resize: vertical;
+}
+input[type=password]{
+    width: 40%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    resize: vertical;
+}
+/*set font size and weight along with text to allign centre*/
+h2{
+    font-size: 33px;
+    text-align: center;
+    font-weight:bold;
+}
+
+label {
+    padding: 12px 12px 12px 0;
+    display: flex;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.container1 {
+    border-radius: 20px;
+    padding-left: 550px;
+}
+
+br{
+    clear: both;
+}
+button{
+    width: 40%;
+    background-color: black;
+    border: 2px solid black;
+    color: white;
+    padding: 5px;
+    font-size: 20px;
+    font-weight: bold;
+    cursor: pointer;
+}
+/*When screen goes below 400px make the labe and input be 100% of the width without margin from top*/
+@media (max-width: 400px) {
+    label,input{
+        width: 100%;
+        margin-top: 0;
+    }
+}
