@@ -48,6 +48,8 @@ nav #icon{
 }
 /*Customise the logo of the nav bar to a certain size colour and some padding*/
 label.logo{
+    background-image: url("../img/cf.png");
+    background-size: cover;
     font-size: 35px;
     font-weight: bold;
     color: white;
@@ -70,7 +72,7 @@ label.logo{
 /*When screen gets lower than 850px when pressed in icon it should display the list of pages in a block*/
 @media only screen and ( max-width: 850px){
     nav #icon{
-        dssplay: block;
+        display: block;
     }
     /*Set the width and height with position and background colour for the nav bar*/
     /*Allign all text to be in centre*/

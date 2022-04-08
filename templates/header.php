@@ -15,7 +15,7 @@
     <nav>
         <label class="logo">Critical Fitness</label>
         <ul>
-            <li><a href="../PHP code/products.php">Products</a></li>
+            <li><a href="../../test/PHP%20code/products.php">Products</a></li>
             <li><a href="../PHP code/login.php">Login</a></li>
             <li><a href="../PHP code/register.php">Register</a></li>
         </ul>

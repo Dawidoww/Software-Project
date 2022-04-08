@@ -1,9 +1,24 @@
 <?php include "../templates/header.php"; ?>
     <link rel="stylesheet" href="../css/register.css"/>
+<body>
+<div class="container2">
+    <form method="post">
+        <h2 class="form-register-heading">Register</h2>
+        <label1 for="firstname">First Name</label1>
+        <input type="text" name="firstname" id="firstname" required>
+        <label1 for="lastname">Last Name</label1>
+        <input type="text" name="lastname" id="lastname" required>
+        <label1 for="email">Email Address</label1>
+        <input type="email" name="email" id="email" required>
+        <label1 for="password">Password</label1>
+        <input type="password" name="password" id="password" required><br><br>
+        <button name="submit" value="Register" class="button" type="submit">Register</button>
+    </form>
+    <br>
+    <a href="login.php"><button>Already a User?</button></a>
 <?php if (isset($_POST['submit']) && $statement) {?>
     <?php echo escape($_POST['firstname']); ?> successfully added.
 <?php } ?>
-    <h2 class="register">Register User</h2>
 <?php
 if (isset($_POST['submit'])) {
     try {
@@ -44,17 +59,6 @@ if (isset($_POST['submit'])) {
     }
 }
 ?>
-    <form method="post">
-        <label1 for="firstname">First Name</label1>
-        <input type="text" name="firstname" id="firstname" required>
-        <label1 for="lastname">Last Name</label1>
-        <input type="text" name="lastname" id="lastname" required>
-        <label1 for="email">Email Address</label1>
-        <input type="email" name="email" id="email" required>
-        <label1 for="password">Password</label1>
-        <input type="password" name="password" id="password" required><br><br>
-        <button name="submit" value="Register" class="button" type="submit">Register</button>
-    </form>
-<br>
-    <a href="login.php"><button>Already a User?</button></a>
+</div>
+</body>
 <?php include "../templates/footer.php"; ?>
