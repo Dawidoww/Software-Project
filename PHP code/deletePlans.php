@@ -33,7 +33,6 @@ try {
         <th>Plan Type</th>
         <th>Description</th>
         <th>Price</th>
-        <th>Update</th>
         <th>Delete</th>
 
     </tr>
@@ -51,6 +50,7 @@ try {
     <?php endforeach; ?>
     </tbody>
 </table>
+<a href="adminControl.php"><button name="Submit" value="Back" class="button" type="submit">Back</button></a>
 <?php require "../templates/footer.php"; ?>
 
 

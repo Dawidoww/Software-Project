@@ -4,7 +4,7 @@ if (isset($_GET["promoCode"])) {
     try {
         require_once '../SRC/connectDB.php';
         $promoCode = $_GET["promoCode"];
-        $sql = "DELETE FROM promo WHERE planName = :promoCode";
+        $sql = "DELETE FROM promo WHERE promoCode = :promoCode";
         $statement = $connection->prepare($sql);
         $statement->bindValue(':promoCode', $promoCode);
         $statement->execute();
@@ -44,4 +44,5 @@ try {
         <?php endforeach; ?>
         </tbody>
     </table>
+    <a href="adminControl.php"><button name="Submit" value="Back" class="button" type="submit">Back</button></a>
 <?php require "../templates/footer.php"; ?>

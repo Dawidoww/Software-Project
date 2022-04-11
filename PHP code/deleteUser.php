@@ -70,7 +70,6 @@ $result = $statement->fetchAll();
 echo $sql . "<br>" . $error->getMessage();
 }
 ?>
-<?php require "../templates/header.php"; ?>
 <h2>Delete Customer Details</h2>
 <?php if ($success) echo $success; ?>
 <table>
@@ -92,5 +91,5 @@ echo $sql . "<br>" . $error->getMessage();
     <?php endforeach; ?>
     </tbody>
 </table>
-
+<a href="adminControl.php"><button name="Submit" value="Back" class="button" type="submit">Back</button></a>
 <?php require "../templates/footer.php"; ?>

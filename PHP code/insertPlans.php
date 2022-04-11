@@ -1,29 +1,47 @@
 <?php include "../templates/header.php"; ?>
-
-<?php if (isset($_POST['submit']) && $statement) {?>
-    <?php echo escape($_POST['planName']); ?> successfully added.
-<?php } ?>
-
-<h2>Add Plan</h2>
-<?php
-if (isset($_POST['submit'])) {
-    try {
-        require_once '../SRC/connectDB.php';
-        require_once 'Classes/Plans.php';
-        $sql = "INSERT INTO plans
-           VALUES ('Power Up','Power Lifting', 'Great power insurgence withing a few weeks.', 49.99 ),
-           ('Transform', 'BodyBuilding', 'Wanna becvome Arnold 2.0? Choose me!!', 49.99),
-           ('The Weight Blaster', 'Slimming', 'Loose all excess fat, look more healthier and comfortable in your own body, then this plan is for YOU', 39.99),
-           ('Titan Mode', 'Bulking', 'Wanna gain some extra mass? Wanna improve your strength?If so then this plan is perfect to get your goal started', 44.99)";
-        $statement = $connection->prepare($sql);
-        $statement->execute();
-    } catch(PDOException $error) {
-        echo $sql . "<br>" . $error->getMessage();
-    }
-}
-
-?>
-<form method="post">
-    <input type="submit" name="submit" value="Submit">
-</form>
+    <link rel="stylesheet" href="../css/register.css"/>
+    <body>
+    <div class="container2">
+        <form method="post">
+            <h2 class="form-register-heading">Add Plans</h2>
+            <label1 for="name">Name Of Plan</label1>
+            <input type="text" name="name" id="name" required>
+            <label1 for="type">Type of Plan</label1>
+            <input type="text" name="type" id="type" required>
+            <label1 for="description">Description</label1>
+            <input type="text" name="desc" id="desc" required>
+            <label1 for="price">Price</label1>
+            <input type="text" name="price" id="price" required><br><br>
+            <button name="submit" value="add" class="button" type="submit">Add Plan</button><br><br>
+        </form>
+        <?php if (isset($_POST['submit']) && $statement) {?>
+            <?php echo escape($_POST['name']); ?> successfully added.
+        <?php } ?>
+        <?php
+        if (isset($_POST['submit'])) {
+            try {
+                require_once '../SRC/connectDB.php';
+                $new_Plan = array(
+                    "planName" => $_POST['name'],
+                    "type" => $_POST['type'],
+                    "description" => $_POST['desc'],
+                    "price" => $_POST['price']
+                );
+                //          $sql = "INSERT INTO plans(planName,type,description,price) VALUES (:planName,:type,:description,:price)";
+                $sql = sprintf(
+                    "INSERT INTO %s (%s) values (%s)",
+                    "plans",
+                    implode(", ", array_keys($new_Plan)),
+                    ":" . implode(", :", array_keys($new_Plan))
+                );
+                $statement = $connection->prepare($sql);
+                $statement->execute($new_Plan);
+            } catch(PDOException $error) {
+                echo $sql . "<br>" . $error->getMessage();
+            }
+        }
+        ?>
+        <a href="adminControl.php"><button name="Submit" value="Back" class="button" type="Submit">Back</button></a>
+    </div>
+    </body>
 <?php include "../templates/footer.php"; ?>

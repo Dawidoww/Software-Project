@@ -1,14 +1,25 @@
 .container_home {
+    width: 100%;
     text-align: center;
     border-bottom: 1px solid #e5e5e5;
 }
 button{
-    width: 20%;
+    width: max-content;
     background-color: black;
     border: 2px solid black;
     color: white;
     padding: 5px;
-    font-size: 15px;
+    font-size: 20px;
+    font-weight: bold;
+    cursor: pointer;
+}
+button1{
+    width: max-content;
+    background-color: black;
+    border: 2px solid black;
+    color: white;
+    padding: 5px;
+    font-size: 20px;
     font-weight: bold;
     cursor: pointer;
 }

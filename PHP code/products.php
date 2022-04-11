@@ -1,4 +1,4 @@
-<link rel="stylesheet" href="../css/item.css"/>
+<link rel="stylesheet" href="../css/item.css">
 <?php
 include "../templates/header.php";
 require "../PHP code/functions.php";
@@ -7,11 +7,11 @@ if (isset($_POST['Submit'])) {
     try {
         require_once '../SRC/connectDB.php';
         require_once '../PHP code/Classes/Basket.php';
-        $basket = new Basket(0,'');
-        $basket->setAmount(49.99);
-        $basket->setPlanName('Power Up');
-        $basket->AddItem();
-        $sql = "INSERT INTO basket(amount,planName) VALUES ( 22.99,'Power Up' )";
+        //    $basket = new Basket(0,2);
+        //    $basket->setAmount(49.99);
+        //   $basket->setPlanName('Power Up');
+        //   $basket->AddItem();
+        $sql = "INSERT INTO basket(amount,planName) VALUES ( 21.99,'Power Up' )";
         $statement = $connection->prepare($sql);
         $statement->execute();
     } catch(PDOException $error) {
@@ -46,10 +46,5 @@ try {
             </tbody>
         </form>
     </table>
-    <form method="post">
-        <div class="Out">
-            <a href="OrderDetails.php"><button name="submit" value="CheckOut" class="button" type="check">Please Check Out </button></a><br>
-        </div>
-    </form>
 </div>
 <?php require "../templates/footer.php"; ?>
