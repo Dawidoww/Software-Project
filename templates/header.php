@@ -21,11 +21,13 @@ session_start();
     <nav>
         <label class="logo">Critical Fitness</label>
         <ul>
-            <li><a href="../PHP%20code/test1.php">Home</a></li>
-            <li><a href="../PHP code/products.php">Products</a></li>
+            <li><a href="../PHP code/test1.php">Home</a></li>
             <li><a href="../PHP code/login.php">Login</a></li>
             <li><a href="../PHP code/register.php">Register</a></li>
-
+            <li><a href="../PHP code/products.php">Products</a></li>
+            <li><a href="../PHP code/basket_checkout.php">Basket</a></li>
+            <li><a href="../PHP code/OrderDetails.php">My Order</a></li>
+            <li><a href="../PHP code/adminHome.php">Admin</a></li>
         </ul>
         <label id="icon">
             <i class="fas fa-bars"></i>

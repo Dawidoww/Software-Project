@@ -6,6 +6,14 @@ input[type=email]{
     box-sizing: border-box;
     resize: vertical;
 }
+input[type=text]{
+    width: 40%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    resize: vertical;
+}
 input[type=password]{
     width: 40%;
     padding: 12px;
@@ -40,10 +48,6 @@ label1 {
     background-image: url("../img/food.jpg");
     background-size: cover;
     background-attachment: fixed;
-}
-
-br{
-    clear: both;
 }
 button{
     width: 40%;
