@@ -2,22 +2,22 @@
 //This is a basket class
 class Basket
 {
-    private int $quantity;
+    private int $amount;
     private String $planName;
 
-    public function __construct($quantity ,$planName)
+    public function __construct($amount ,$planName)
     {
-        $this->quantity = $quantity;
+        $this->amount = $amount;
         $this->planName = $planName;
     }
     //get/set quantity
-    public function getQuantity(): int
+    public function getAmount(): int
     {
-        return $this->quantity;
+        return $this->amount;
     }
-    public function setQuantity(int $quantity): void
+    public function setAmount(int $amount): void
     {
-        $this->quantity = $quantity;
+        $this->amount = $amount;
     }
     //get/set planName
     public function getPlanName(): string
@@ -29,7 +29,7 @@ class Basket
         $this->planName = $planName;
     }
     //this function checks for the amount of quantity in a basket and proceeds to check out
-    public function CheckOut(){echo "There is $this->quantity items in your basket. If you are happy to proceed please checkout.\n";}
+    public function CheckOut(){echo "Please check out and finalise your order.\n";}
     //this function add an item to the basket
     public function AddItem(){echo "Item $this->planName has been added to the basket.\n";}
     //this function removes an item from basket

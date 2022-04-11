@@ -27,6 +27,7 @@ if (isset($_POST['submit'])) {
             "email" => $_POST['email'],
             "password" => $_POST['password']
         );
+        header("location:login.php");
         $sql = sprintf(
             "INSERT INTO %s (%s) values (%s)",
             "user",

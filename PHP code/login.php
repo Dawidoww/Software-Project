@@ -1,4 +1,5 @@
-<?php require_once('../templates/header.php'); ?>
+<?php
+require_once('../templates/header.php'); ?>
 <link rel="stylesheet" href="../css/login.css"/>
     <title>Sign in as Customer</title>
 <body>
@@ -19,6 +20,7 @@
     if (isset($_POST['submit'])) {
         try {
             require_once '../SRC/connectDB.php';
+            require_once '../PHP code/Classes/User.php';
             $sql = "SELECT * FROM user WHERE email = :email AND password = :password";
             $email = $_POST['email'];
             $password = $_POST['password'];
@@ -35,7 +37,12 @@
     }
     if (isset($_POST['submit'])) {
         if ($result && $statement->rowCount() > 0) {
-            ?> <h4>User successfully logged in!!!</h4>  <?php }
+            ?><?php
+            $_SESSION['email'] = $email;
+            $_SESSION['Active'] = true;
+            header("location:test1.php");
+            exit;
+        }
         else {
             ?> <h4>Incorrect Email or Password!!!</h4>
         <?php }

@@ -1,3 +1,9 @@
+<?php
+session_start();
+//if($_SESSION['Active'] == false){
+//header("location:login.php");
+//exit;} ?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -15,9 +21,11 @@
     <nav>
         <label class="logo">Critical Fitness</label>
         <ul>
-            <li><a href="../../test/PHP%20code/products.php">Products</a></li>
+            <li><a href="../PHP%20code/test1.php">Home</a></li>
+            <li><a href="../PHP code/products.php">Products</a></li>
             <li><a href="../PHP code/login.php">Login</a></li>
             <li><a href="../PHP code/register.php">Register</a></li>
+
         </ul>
         <label id="icon">
             <i class="fas fa-bars"></i>

@@ -1,0 +1,47 @@
+tbody tr td
+{
+    width: 0.1%;
+    height: 1%;
+    display: flow;
+    color: red;
+    font-size: 28px;
+    border-bottom: 3px solid #eeeeee;
+}
+div.container_item
+{
+    background-image: url("../img/food.jpg");
+    background-size: cover;
+    background-attachment: fixed;
+}
+h2{
+    color: #eeeeee;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    border: 1px solid;
+    text-align: center;
+    font-size: 45px;
+}
+button{
+    width: 40%;
+    background-color: white;
+    border: 2px solid black;
+    color: black;
+    padding: 5px 5px 5px 0;
+    font-size: 20px;
+    font-weight: bold;
+    cursor: pointer;
+}
+tbody tr td button
+{
+    width: 40%;
+    background-color: white;
+    border: 2px solid black;
+    color: black;
+    padding: 5px 5px 5px 0;
+    font-size: 20px;
+    font-weight: bold;
+    cursor: pointer;
+}
+button{
+    width: 100%;
+}

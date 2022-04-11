@@ -37,7 +37,7 @@ CREATE TABLE `Promo` (
 );
 
 CREATE TABLE `Order` (
-                         `orderID` INT,
+                         `orderID` INT ,
                          `date` DATETIME,
                          `shipEmail` VARCHAR(45),
                          `promoCode` VARCHAR(45),
