@@ -1,3 +1,4 @@
+<link rel="stylesheet" href="../css/controlpanel.css"/>
 <?php
 require "../PHP code/functions.php";
 if (isset($_GET["userID"])) {
@@ -24,18 +25,19 @@ try {
 }
 ?>
 <?php require "../templates/header.php"; ?>
-<h2>Delete users</h2>
+<h2>Delete User Data</h2>
 <?php if ($success) echo $success; ?>
-<table>
+<table class="content_table">
     <thead>
     <tr>
         <th>Email Address</th>
         <th>Password</th>
+        <th>Delete</th>
     </tr>
     </thead>
     <tbody>
     <?php foreach ($result as $row) : ?>
-        <tr>
+        <tr class="active-row">
             <td><?php echo escape($row["email"]); ?></td>
             <td><?php echo escape($row["password"]); ?></td>
 
@@ -72,16 +74,17 @@ echo $sql . "<br>" . $error->getMessage();
 ?>
 <h2>Delete Customer Details</h2>
 <?php if ($success) echo $success; ?>
-<table>
+<table class="content_table">
     <thead>
     <tr>
         <th>First Name</th>
         <th>Last Name</th>
+        <th>Delete</th>
     </tr>
     </thead>
     <tbody>
     <?php foreach ($result as $row) : ?>
-        <tr>
+        <tr class="active-row">
             <td><?php echo escape($row["name"]); ?></td>
             <td><?php echo escape($row["surname"]); ?></td>
 

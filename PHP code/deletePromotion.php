@@ -1,3 +1,4 @@
+<link rel="stylesheet" href="../css/controlpanel.css"/>
 <?php
 require "../PHP code/functions.php";
 if (isset($_GET["promoCode"])) {
@@ -24,18 +25,19 @@ try {
 }
 ?>
 <?php require "../templates/header.php"; ?>
-    <h2>Delete plans</h2>
+    <h2>Delete Promotions</h2>
 <?php if ($success) echo $success; ?>
-    <table>
+    <table class="content_table">
         <thead>
         <tr>
             <th>Promo Code</th>
             <th>Discount</th>
+            <th>Delete</th>
         </tr>
         </thead>
         <tbody>
         <?php foreach ($result as $row) : ?>
-            <tr>
+            <tr class="active-row">
                 <td><?php echo escape($row["promoCode"]); ?></td>
                 <td><?php echo escape($row["amount"]); ?></td>
                 <td><a href="deletePromotion.php?promoCode=<?php echo escape($row["promoCode"]);

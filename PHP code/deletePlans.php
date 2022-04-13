@@ -1,3 +1,4 @@
+<link rel="stylesheet" href="../css/controlpanel.css"/>
 <?php
 require "../PHP code/functions.php";
 if (isset($_GET["planName"])) {
@@ -26,7 +27,7 @@ try {
 <?php require "../templates/header.php"; ?>
 <h2>Delete plans</h2>
 <?php if ($success) echo $success; ?>
-<table>
+<table class="content_table">
     <thead>
     <tr>
         <th>Plan Name</th>
@@ -39,7 +40,7 @@ try {
     </thead>
     <tbody>
     <?php foreach ($result as $row) : ?>
-        <tr>
+        <tr class="active-row">
             <td><?php echo escape($row["planName"]); ?></td>
             <td><?php echo escape($row["type"]); ?></td>
             <td><?php echo escape($row["description"]); ?></td>
