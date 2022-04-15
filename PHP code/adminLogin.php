@@ -14,8 +14,6 @@ require_once('../templates/header.php'); ?>
     </form>
     <br>
     <?php
-   // $trainerName = "admin@gmail.com";
-   // $Password = "pass";
     if (isset($_POST['submit'])) {
         try {
             require_once '../SRC/connectDB.php';

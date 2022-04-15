@@ -1,4 +1,3 @@
-
 button{
     width: max-content;
     background-color: black;
@@ -9,7 +8,7 @@ button{
     font-weight: bold;
     cursor: pointer;
 }
-.button1{
+button1{
     width: max-content;
     background-color: black;
     border: 2px solid black;
@@ -19,44 +18,30 @@ button{
     font-weight: bold;
     cursor: pointer;
 }
-
-
 .page {
-
     background-image: url("../img/food.jpg");
     background-size: cover;
     background-attachment: fixed;
     display: flex;
     flex-direction: row;
-    /*height: 100%;*/
-    margin: .1rem;
     padding: .6rem;
-
-
 }
 .box1 {
-
     text-align: center;
     border-bottom: 1px solid #e5e5e5;
-
     flex: 1;
     background-color: rgba(255,255,255,.85);
     margin: 1rem;
     padding: .1rem;
     border-radius: 15px;
-
 }
-
-
 .box2 {
     flex: 2;
     background-color: rgba(255,255,255,.85);
     margin: 1rem;
     padding: .1rem;
     border-radius: 15px;
-
 }
-
 .box3 {
     flex: 2;
     background-color: rgba(255,255,255,.85);
@@ -64,15 +49,6 @@ button{
     padding: .1rem;
     border-radius: 15px;
 }
-
-
-
-
-
-table, td, th {
-    border: 1px dashed darkslategray;
-}
-
 h1{
     text-transform: uppercase;
     text-align:center;
@@ -81,40 +57,15 @@ h1{
     font-family: "Arial Black", Gadget, sans-serif;
 }
 h2 {
-
     text-align:center;
     text-shadow: 2px 2px 5px blue;
     font-size: 20px;
     font-family: "Arial Black", Gadget, sans-serif;
 }
-
-
-
 p {
-
     font-size:17px;
     font-family: "Arial Black",'Courier New', monospace;
     text-shadow: 2px 2px 5px #5f6061;
-}
-
-.a2:link, .a2:visited {
-    background-color: black;
-    color: white;
-    border: 2px solid black;
-    padding: 10px 20px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 35px;
-    border-radius: 15px;
-    margin: .6rem;
-    position: center;
-}
-
-.a2:hover, .a2:active {
-
-    background-color: white;
-    color: black;
 }
 
 ::selection {

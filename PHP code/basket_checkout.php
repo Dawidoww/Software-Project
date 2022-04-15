@@ -1,4 +1,3 @@
-
 <?php
 require "../PHP code/functions.php";
 
