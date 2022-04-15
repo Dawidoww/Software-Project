@@ -1,4 +1,4 @@
-<link rel="stylesheet" href="../css/item.css">
+<link rel="stylesheet" href="../css/product.css">
 <?php
 include "../templates/header.php";
 require "../PHP code/functions.php";
@@ -29,22 +29,29 @@ try {
 }
 ?>
 <?php if ($success) echo $success; ?>
-<div class="container_item">
-    <h2>Products</h2>
-    <table>
-        <form method="post">
-            <tbody>
-            <?php foreach ($result as $row) : ?>
-                <tr>
-                    <td class="plan"><?php echo $row["planName"]; ?></td>
-                    <td class="typ"><?php echo escape($row["type"]); ?></td>
-                    <td class="desc"><?php echo escape($row["description"]); ?></td>
-                    <td class="price"><?php echo escape($row["price"]); ?></td>
-                    <td><button name="Submit" value="Choose" class="button" type="submit">Add</button></td>
-                </tr>
-            <?php endforeach; ?>
-            </tbody>
-        </form>
-    </table>
-</div>
+<h2>Products</h2>
+<table class="container_item">
+    <thead>
+        <tr>
+            <th>Plan Name</th>
+            <th>Plan Type</th>
+            <th>Description</th>
+            <th>Price</th>
+            <th>Action</th>
+        </tr>
+    </thead>
+    <form method="post">
+        <tbody>
+        <?php foreach ($result as $row) : ?>
+            <tr class="active-row">
+                <td class="plan"><?php echo $row["planName"]; ?></td>
+                <td class="typ"><?php echo escape($row["type"]); ?></td>
+                <td class="desc"><?php echo escape($row["description"]); ?></td>
+                <td class="price"><?php echo escape($row["price"]); ?></td>
+                <td><button name="Submit" value="Choose" class="button" type="submit">Add</button></td>
+            </tr>
+        <?php endforeach; ?>
+        </tbody>
+    </form>
+</table>
 <?php require "../templates/footer.php"; ?>

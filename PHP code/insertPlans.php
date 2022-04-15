@@ -1,6 +1,5 @@
 <?php include "../templates/header.php"; ?>
     <link rel="stylesheet" href="../css/register.css"/>
-    <body>
     <div class="container2">
         <form method="post">
             <h2 class="form-register-heading">Add Plans</h2>
@@ -43,5 +42,4 @@
         ?>
         <a href="adminControl.php"><button name="Submit" value="Back" class="button" type="Submit">Back</button></a>
     </div>
-    </body>
 <?php include "../templates/footer.php"; ?>

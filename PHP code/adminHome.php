@@ -1,6 +1,6 @@
 <?php require_once('../templates/header.php'); ?>
     <link rel="stylesheet" href="../css/homepage.css"/>
-    <body>
+
 <div class="container_home">
 
     <h2> Status: You are logged in <?php echo $_SESSION['trainerName'];?></h2>

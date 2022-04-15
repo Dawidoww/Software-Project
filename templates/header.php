@@ -33,6 +33,3 @@ session_start();
             <i class="fas fa-bars"></i>
         </label>
     </nav>
-</div>
-</body>
-</html>

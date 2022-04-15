@@ -2,7 +2,6 @@
 require_once('../templates/header.php'); ?>
 <link rel="stylesheet" href="../css/login.css"/>
     <title>Sign in as Customer</title>
-<body>
 <div class="container1">
     <form action="" method="post" name="Login_Form" class="form-signin">
         <h2 class="form-signin-heading">Login</h2>
@@ -50,6 +49,5 @@ require_once('../templates/header.php'); ?>
         <?php }
     } ?>
 </div>
-</body>
 <?php require_once('../templates/footer.php'); ?>
 

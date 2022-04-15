@@ -29,14 +29,13 @@ try {
 <?php if ($success) echo $success; ?>
 <table class="content_table">
     <thead>
-    <tr>
-        <th>Plan Name</th>
-        <th>Plan Type</th>
-        <th>Description</th>
-        <th>Price</th>
-        <th>Delete</th>
-
-    </tr>
+        <tr>
+            <th>Plan Name</th>
+            <th>Plan Type</th>
+            <th>Description</th>
+            <th>Price</th>
+            <th>Delete</th>
+        </tr>
     </thead>
     <tbody>
     <?php foreach ($result as $row) : ?>

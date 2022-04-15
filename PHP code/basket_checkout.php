@@ -1,5 +1,19 @@
+
 <?php
 require "../PHP code/functions.php";
+
+if (isset($_POST["submit"])) {
+    try {
+        require_once '../SRC/connectDB.php';
+        $sql = "INSERT INTO `order`(orderID,shipEmail) VALUES (3,'dawidoww15@gmail.com')";
+        $statement = $connection->prepare($sql);
+        $statement->execute();
+        $success = "Order Created";
+    } catch(PDOException $error) {
+        echo $sql . "<br>" . $error->getMessage();
+    }
+}
+
 if (isset($_GET["planName"])) {
     try {
         require_once '../SRC/connectDB.php';
@@ -26,7 +40,7 @@ try {
 <?php require "../templates/header.php"; ?>
 <h2>Basket</h2>
 <?php if ($success) echo $success; ?>
-<table>
+<table class="container_item">
     <thead>
     <tr>
         <th>Plan Name</th>
@@ -45,4 +59,9 @@ try {
     <?php endforeach; ?>
     </tbody>
 </table>
+<form method="post">
+    <div class="Out">
+        <a href="OrderDetails.php"><button name="submit" value="CheckOut" class="button" type="submit">CheckOut</button></a><br>
+    </div>
+</form>
 <?php require "../templates/footer.php"; ?>

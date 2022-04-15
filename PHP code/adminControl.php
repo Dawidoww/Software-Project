@@ -1,5 +1,5 @@
 <?php require_once('../templates/header.php'); ?>
-<link rel="stylesheet" href="../css/controlpanel.css"/>
+
 <div class="cont1">
 <h2>ADD</h2>
 <ul>

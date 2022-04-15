@@ -1,6 +1,5 @@
 <?php include "../templates/header.php"; ?>
     <link rel="stylesheet" href="../css/register.css"/>
-    <body>
     <div class="container2">
         <form method="post">
             <h2 class="form-register-heading">Add Promotion</h2>
@@ -36,5 +35,4 @@
         }
         ?>
     </div>
-    </body>
 <?php include "../templates/footer.php"; ?>

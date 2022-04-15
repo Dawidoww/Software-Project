@@ -1,6 +1,5 @@
 <?php include "../templates/header.php"; ?>
     <link rel="stylesheet" href="../css/register.css"/>
-<body>
 <div class="container2">
     <form method="post">
         <h2 class="form-register-heading">Register</h2>
@@ -61,5 +60,4 @@ if (isset($_POST['submit'])) {
 }
 ?>
 </div>
-</body>
 <?php include "../templates/footer.php"; ?>
