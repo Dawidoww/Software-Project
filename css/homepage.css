@@ -25,6 +25,7 @@ button1{
     display: flex;
     flex-direction: row;
     padding: .6rem;
+    margin: .6rem;
 }
 .box1 {
     text-align: center;
@@ -73,6 +74,24 @@ p {
     background: black;
 }
 
+.a2:link, .a2:visited {
+    background-color: black;
+    color: white;
+    border: 2px solid black;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 27px;
+    border-radius: 15px;
+    margin: .6rem;
+    position: center;
+}
 
+.a2:hover, .a2:active {
+
+    background-color: white;
+    color: black;
+}
 
 

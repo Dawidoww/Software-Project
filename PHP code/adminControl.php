@@ -7,6 +7,7 @@
         <li class = "l1"><a class ="a1" href="insertPlans.php"><strong>Plans</strong></a></li>
         <li class = "l1"><a class ="a1" href="insertPromotion.php"><strong>Promotion</strong></a></li>
     </ul>
+        <a href="adminHome.php"><button name="Submit" value="Back" class="button" type="submit">Back</button></a>
     </div>
     <div class="cont2">
     <h2>DELETE</h2>
@@ -16,7 +17,8 @@
         <li class = "l1"><a class ="a1" href="deleteUser.php"><strong>User</strong></a></li>
     </ul>
     <br>
+        <br>
     </div>
 </div>
-<a href="adminHome.php"><button name="Submit" value="Back" class="button" type="submit">Back</button></a>
+
 <?php require_once('../templates/footer.php'); ?>
