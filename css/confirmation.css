@@ -74,6 +74,8 @@ h2 {
 
 
 
+
+
 p {
 
     font-size:17px;
@@ -85,7 +87,7 @@ p {
 
     font-size:17px;
     font-family: "Arial Black",'Courier New', monospace;
-    text-shadow: 2px 2px 5px #5f6061;
+    text-shadow: 2px 2px 5px blue;
      text-align: left;
 }
 

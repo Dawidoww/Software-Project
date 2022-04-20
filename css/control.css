@@ -2,7 +2,7 @@ h2 {
     text-transform: uppercase;
     text-align:center;
     text-shadow: 2px 2px 5px red;
-    font-size: 27px;
+    font-size: 28px;
     font-family: "Arial Black", Gadget, sans-serif;
 }
 .cont1{
@@ -33,18 +33,20 @@ button{
     background-color: black;
     border: 2px solid black;
     color: white;
-    padding: 5px;
-    font-size: 20px;
+    padding: 10px 20px;
+    font-size: 23px;
     font-weight: bold;
     cursor: pointer;
-    border-radius: 12px;
+    border-radius: 15px;
 }
 .ul2 {
     padding: 50px;
     list-style-type: none;
+
 }
 .ul2 l1 {
     margin: 10px;
+
 }
 .a1:link, .a1:visited {
     background-color: black;
@@ -62,4 +64,13 @@ button{
 .a1:hover, .a1:active {
     background-color: white;
     color: black;
+}
+.button:hover {
+    background-color: white;
+    color: black;
+}
+
+::selection {
+    color: white;
+    background: black;
 }
