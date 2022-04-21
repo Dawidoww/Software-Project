@@ -34,8 +34,6 @@ button{
     background-color: white;
     color: black;
 }
-
-
 .page {
     background-image: url("../img/food.jpg");
     background-size: cover;
@@ -43,7 +41,7 @@ button{
     display: flex;
     flex-direction: row;
     padding: .6rem;
-    margin: .6rem;
+
 }
 .box1 {
     text-align: center;

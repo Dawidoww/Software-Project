@@ -1,0 +1,69 @@
+body
+{
+    background-image: url("../img/food.jpg");
+    background-size: cover;
+    background-attachment: fixed;
+}
+.container_item
+{
+    border-collapse: collapse;
+    margin: 25px 0;
+    font-size: 1.5em;
+    min-width: 400px;
+    border-radius: 5px 5px 0 0;
+    overflow: hidden;
+    box-shadow: 0 0 20px rgba(0,0,0,1);
+    position: relative;
+    left:450px;
+    width: 40%;
+}
+.container_item thead tr
+{
+    background-color: red;
+    color: #ffffff;
+    text-align: left;
+    font-weight: bold;
+    opacity: 75.5%;
+}
+.container_item th, .container_item td
+{
+    padding: 12px 15px;
+}
+.container_item tbody tr
+{
+    border-bottom: 1px solid #dddddd;
+}
+h2{
+    text-align: center;
+    font-size: 30px;
+    color: #eeeeee;
+}
+.container_item tbody tr:nth-of-type(even)
+{
+    background-color: #f3f3f3;
+    opacity: 65.5%;
+}
+.container_item tbody tr:nth-of-type(odd)
+{
+    background-color: #f3f3f3;
+    opacity: 65.5%;
+}
+.container_item tbody tr:last-of-type
+{
+    border-bottom: 2px solid red;
+}
+.container_item tbody tr.active-row
+{
+    font-weight: bold;
+    color: red;
+}
+button{
+    width: 40%;
+    background-color: white;
+    border: 2px solid black;
+    color: black;
+    padding: 5px 5px 5px 0;
+    font-size: 20px;
+    font-weight: bold;
+    cursor: pointer;
+}

@@ -1,20 +1,4 @@
-input[type=email]{
-    width: 40%;
-    padding: 12px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    box-sizing: border-box;
-    resize: vertical;
-}
 input[type=text]{
-    width: 40%;
-    padding: 12px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    box-sizing: border-box;
-    resize: vertical;
-}
-input[type=password]{
     width: 40%;
     padding: 12px;
     border: 1px solid #ccc;
@@ -30,9 +14,6 @@ h2{
     padding-bottom: 50px;
     padding-top: 60px;
 }
-h4{
-    color: #eeeeee;
-}
 
 label1 {
     padding: 12px 12px 12px 0;
@@ -42,12 +23,19 @@ label1 {
     color: #eeeeee;
 }
 
-.container1 {
+.container_pay {
     padding-left: 550px;
     padding-bottom: 100px;
     background-image: url("../img/food.jpg");
     background-size: cover;
     background-attachment: fixed;
+}
+a1{
+    width: 10%;
+    padding-left: 550px;
+}
+br{
+    clear: both;
 }
 button{
     width: 40%;
@@ -59,11 +47,20 @@ button{
     font-weight: bold;
     cursor: pointer;
 }
-.error
-{
+a{
+    width: 40%;
+    background-color: black;
+    border: 2px solid black;
+    color: white;
+    padding: 5px;
+    font-size: 20px;
+    font-weight: bold;
+    cursor: pointer;
+}
+.error{
     color: red;
 }
-/*When screen goes below 400px make the labe and input be 100% of the width without margin from top*/
+/*When screen goes below 400px make the label and input be 100% of the width without margin from top*/
 @media (max-width: 400px) {
     label,input{
         width: 100%;

@@ -4,7 +4,7 @@ require "../PHP code/functions.php";
 if (isset($_POST["submit"])) {
     try {
         require_once '../SRC/connectDB.php';
-        $sql = "INSERT INTO `order`(orderID,shipEmail) VALUES (3,'dawidoww15@gmail.com')";
+        $sql = "INSERT INTO `order`(shipEmail,planName,amount) VALUES ('dawidoww15@gmail.com','Power Up',21.99)";
         $statement = $connection->prepare($sql);
         $statement->execute();
         $success = "Order Created";

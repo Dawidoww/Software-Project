@@ -1,6 +1,7 @@
 CREATE DATABASE Critical_Fitness;
 use Critical_Fitness;
 
+
 CREATE TABLE `Plans` (
                          `planName` VARCHAR(45),
                          `type` VARCHAR(45),
@@ -10,7 +11,7 @@ CREATE TABLE `Plans` (
 );
 
 CREATE TABLE `Card` (
-                        `cardNumber` INT,
+                        `cardNumber`VARCHAR(45) ,
                         `type` VARCHAR(45),
                         `cvv` INT,
                         PRIMARY KEY (`cardNumber`)
@@ -24,9 +25,9 @@ CREATE TABLE `Basket` (
 );
 
 CREATE TABLE `Payment` (
-                           `amount` FLOAT,
-                           `cardNumber` INT,
-                           PRIMARY KEY (`amount`),
+                           `paymentID` INT UNSIGNED AUTO_INCREMENT,
+                           `cardNumber` VARCHAR(45),
+                           PRIMARY KEY (`paymentID`),
                            FOREIGN KEY (`cardNumber`) REFERENCES `Card`(`cardNumber`)
 );
 
@@ -37,22 +38,20 @@ CREATE TABLE `Promo` (
 );
 
 CREATE TABLE `Order` (
-                         `orderID` INT ,
-                         `date` DATETIME,
+                         `orderID` INT UNSIGNED AUTO_INCREMENT,
                          `shipEmail` VARCHAR(45),
                          `promoCode` VARCHAR(45),
                          `amount` FLOAT,
                          `planName` VARCHAR(45),
                          PRIMARY KEY (`orderID`),
-                         FOREIGN KEY (`amount`) REFERENCES `Payment`(`amount`),
-                         FOREIGN KEY (`planName`) REFERENCES `Basket`(`planName`),
+                         FOREIGN KEY (`amount`) REFERENCES `Basket`(`amount`),
                          FOREIGN KEY (`promoCode`) REFERENCES `Promo`(`promoCode`),
-                         FOREIGN KEY (`amount`) REFERENCES `Basket`(`amount`)
+                         FOREIGN KEY (`planName`) REFERENCES `Basket`(`planName`)
 );
 
 CREATE TABLE `Transactions` (
-                                `transactionID` INT  UNSIGNED AUTO_INCREMENT ,
-                                `orderID` INT,
+                                `transactionID` INT,
+                                `orderID` INT UNSIGNED AUTO_INCREMENT,
                                 `amount` FLOAT,
                                 PRIMARY KEY (`transactionID`),
                                 FOREIGN KEY (`orderID`) REFERENCES `Order`(`orderID`),
