@@ -22,7 +22,6 @@ class UserTest
         $this->validatePassword();
         return $this->errors;
     }
-
     private function validatePassword()
     {
         $val = trim($this->data['password']);
@@ -37,7 +36,6 @@ class UserTest
             }
         }
     }
-
     private function validateEmail()
     {
         $val = trim($this->data['email']);
@@ -56,5 +54,7 @@ class UserTest
     {
         $this->errors[$key] = $val;
     }
+
+
+
 }
-?>

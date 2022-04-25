@@ -1,3 +1,5 @@
+
+<link rel="stylesheet" href="../css/basket.css">
 <?php
 require "../PHP code/functions.php";
 

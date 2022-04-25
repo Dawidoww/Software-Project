@@ -19,7 +19,7 @@ body
 }
 .container_item thead tr
 {
-    background-color: red;
+    background-color: #009879;
     color: #ffffff;
     text-align: left;
     font-weight: bold;
@@ -50,12 +50,12 @@ h2{
 }
 .container_item tbody tr:last-of-type
 {
-    border-bottom: 2px solid red;
+    border-bottom: 2px solid #009879;
 }
 .container_item tbody tr.active-row
 {
     font-weight: bold;
-    color: red;
+    color: #009879;
 }
 button{
     width: 40%;

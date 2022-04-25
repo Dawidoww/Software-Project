@@ -1,6 +1,6 @@
 <?php
 //this is an abstract class user
-abstract class User
+class User
 {
     private string $password;
     private string $email;

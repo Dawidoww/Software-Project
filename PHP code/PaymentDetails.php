@@ -39,7 +39,7 @@
                 );
                 $statement = $connection->prepare($sql);
                 $statement->execute($new_Card);
-                //   header("location:confirmation.php");
+                header("location:confirmation.php");
             } catch(PDOException $error) {
                 //     echo $sql . "<br>" . $error->getMessage();
             }
@@ -73,7 +73,7 @@
                 $statement = $connection->prepare($sql);
                 $statement->execute($new_Pay);
             } catch(PDOException $error) {
-                //      echo $sql . "<br>" . $error->getMessage();
+                echo $sql . "<br>" . $error->getMessage();
             }
         }
         ?>

@@ -35,8 +35,8 @@ class RegisterTest
             $this->addError('firstname','Name cannot be empty');
         }
         else {
-            if(!preg_match('/^[a-zA-Z]{4,10}$/', $val)){
-                $this->addError('firstname', 'Name must be only letters and be at least 4 chars long');
+            if(!preg_match('/^[a-zA-Z]$/', $val)){
+                $this->addError('firstname', 'Name must be only letters');
             }
         }
     }
@@ -49,8 +49,8 @@ class RegisterTest
             $this->addError('lastname','Last Name cannot be empty');
         }
         else {
-            if(!preg_match('/^[a-zA-Z]{4,20}$/', $val)){
-                $this->addError('lastname', 'Last Name must be only letters and at least 4 chars long');
+            if(!preg_match('/^[a-zA-Z]$/', $val)){
+                $this->addError('lastname', 'Last Name must be only letters');
             }
         }
     }

@@ -43,6 +43,7 @@ require_once('../templates/header.php'); ?>
         if ($result && $statement->rowCount() > 0) {
             ?><?php
             $_SESSION['email'] = $email;
+            $_SESSION['email'] = $email;
             $_SESSION['Active'] = true;
             header("location:test1.php");
             exit;

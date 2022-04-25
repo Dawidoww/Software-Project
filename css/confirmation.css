@@ -1,14 +1,4 @@
 
-button{
-    width: max-content;
-    background-color: black;
-    border: 2px solid black;
-    color: white;
-    padding: 5px;
-    font-size: 20px;
-    font-weight: bold;
-    cursor: pointer;
-}
 .button1{
     width: max-content;
     background-color: black;
@@ -19,8 +9,6 @@ button{
     font-weight: bold;
     cursor: pointer;
 }
-
-
 .page {
 
     background-image: url("../img/food.jpg");
@@ -28,33 +16,20 @@ button{
     background-attachment: fixed;
     display: flex;
     flex-direction: column;
-    /*height: 100%;*/
-    margin: .1rem;
+    height: 500px;
     padding: .6rem;
-
-
 }
 .box1 {
-
+    padding-top: 70px;
     text-align: center;
     border-bottom: 1px solid #e5e5e5;
-
     flex: 1;
     background-color: rgba(255,255,255,.85);
     margin: 2rem;
-    padding: .1rem;
     border-radius: 15px;
     margin-right: 30rem;
     margin-left: 30rem;
 }
-
-
-
-
-table, td, th {
-    border: 1px dashed darkslategray;
-}
-
 h1{
     text-transform: uppercase;
     text-align:center;
@@ -71,27 +46,11 @@ h2 {
     color: white;
     border-radius: 15px;
 }
-
-
-
-
-
 p {
-
     font-size:17px;
     font-family: "Arial Black",'Courier New', monospace;
     text-shadow: 2px 2px 5px #5f6061;
 }
-
-.p1 {
-
-    font-size:17px;
-    font-family: "Arial Black",'Courier New', monospace;
-    text-shadow: 2px 2px 5px blue;
-     text-align: left;
-}
-
-
 .a2:link, .a2:visited {
     background-color: black;
     color: white;
@@ -107,7 +66,6 @@ p {
 }
 
 .a2:hover, .a2:active {
-
     background-color: white;
     color: black;
 }
