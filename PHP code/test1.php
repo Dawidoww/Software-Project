@@ -1,4 +1,5 @@
 <?php require_once('../templates/header.php'); ?>
+<?php require_once ('../templates/redirect_if_not_logged_in.php')?>
 <link rel="stylesheet" href="../css/homepage.css"/>
 <div class="page">
     <div class="box1">

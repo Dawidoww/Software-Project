@@ -35,6 +35,6 @@ class Basket
     //this function removes an item from basket
     public function RemoveItem(){echo "Item $this->planName has been removed from the basket.\n";}
     //this function calculates the total of the basket
-    public function calcTotal(){echo "This calculates the total of basket.\n";
+    public function calcTotal(){echo "The total of the basket is $this->amount\n";
     }
 }

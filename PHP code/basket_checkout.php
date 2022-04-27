@@ -1,8 +1,12 @@
-
 <link rel="stylesheet" href="../css/basket.css">
 <?php
+require_once '../templates/header.php';
 require "../PHP code/functions.php";
+$total = 0;
+?>
 
+<div class="action"></div>
+<?php
 if (isset($_POST["submit"])) {
     try {
         require_once '../SRC/connectDB.php';
@@ -14,7 +18,10 @@ if (isset($_POST["submit"])) {
         echo $sql . "<br>" . $error->getMessage();
     }
 }
+?>
+</div>
 
+<?php
 if (isset($_GET["planName"])) {
     try {
         require_once '../SRC/connectDB.php';
@@ -38,7 +45,6 @@ try {
     echo $sql . "<br>" . $error->getMessage();
 }
 ?>
-<?php require "../templates/header.php"; ?>
 <h2>Basket</h2>
 <?php if ($success) echo $success; ?>
 <table class="container_item">
@@ -59,6 +65,14 @@ try {
         </tr>
     <?php endforeach; ?>
     </tbody>
+    <thead>
+    <tr>
+        <th>Total: <?php
+            $total = number_format($total, 2);
+            ?>
+            $ <?= $total ?></th>
+    </tr>
+    </thead>
 </table>
 <form method="post">
     <div class="Out">
@@ -66,3 +80,5 @@ try {
     </div>
 </form>
 <?php require "../templates/footer.php"; ?>
+
+

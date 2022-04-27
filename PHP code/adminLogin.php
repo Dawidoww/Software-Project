@@ -19,8 +19,8 @@ require_once('../templates/header.php'); ?>
             require_once '../SRC/connectDB.php';
             require_once '../PHP code/Classes/User.php';
 
-           // $sql = "INSERT INTO personaltrainer(trainerName) VALUES ('admin@gmail.com')";
-           $sql = "SELECT * FROM personaltrainer";
+            //$sql = "INSERT INTO personaltrainer(trainerName) VALUES ('admin@gmail.com')";
+            $sql = "SELECT * FROM personaltrainer";
             $trainerName = $_POST['trainerName'];
             $statement = $connection->prepare($sql);
     //        $statement->bindParam(':email', $email, PDO::PARAM_STR);

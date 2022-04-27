@@ -1,4 +1,5 @@
 <?php include "../templates/header.php"; ?>
+
     <link rel="stylesheet" href="../css/register.css"/>
     <div class="container2">
         <form method="post">

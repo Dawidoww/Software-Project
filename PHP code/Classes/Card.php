@@ -2,25 +2,25 @@
 //this is the card class
 class Card extends Payment
 {
-    private int $number;
+    private int $cardNumber;
     private String $type;
     private int $cvv;
     //This conctructor takes parent constructor of class payment
-    public function __construct($cvv, $type, $number,$amount)
+    public function __construct($cvv, $type, $cardNumber,$amount,$paymentID)
     {
-        parent::__construct($amount);
+        parent::__construct($amount,$paymentID);
         $this->cvv = $cvv;
         $this->type = $type;
-        $this->number = $number;
+        $this->cardNumber = $cardNumber;
     }
     //get/set of number
-    public function getNumber(): int
+    public function getCardNumber(): int
     {
-        return $this->number;
+        return $this->cardNumber;
     }
-    public function setNumber(int $number): void
+    public function setCardNumber(int $cardNumber): void
     {
-        $this->number = $number;
+        $this->cardNumber = $cardNumber;
     }
     //get/set of cvv
     public function getCvv(): int
@@ -43,6 +43,6 @@ class Card extends Payment
     //this function authorizes the card if its valid
     public function Authorize()
     {
-        echo "The $this->type card of number $this->number has been Authorized \n";
+        echo "The $this->type card of number $this->cardNumber has been Authorized \n";
     }
 }

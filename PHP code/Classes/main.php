@@ -69,15 +69,15 @@ $order->promoApplied();
 $order->placeOrder();
 printf("\n");
 //PAYMENT HAS BEEN CREATED
-$payment = new Card(776, "MasterCard",4876594598654782, 49.99);
+$payment = new Card(776, "MasterCard",4876594598654782, 49.99,1);
 $payment->toBePayed();
 $payment->Authorize();
-$payment1 = new Card(356, "Visa",4916745624900843, 44.99);
+$payment1 = new Card(356, "Visa",4916745624900843, 44.99,2);
 $payment1->toBePayed();
 $payment1->Authorize();
 printf("\n");
 //TRANSACTION HAS BEEN CREATED
-$transaction = new Transaction(9342,  49.99 );
+$transaction = new Transaction(1,49.99 );
 $transaction->storeTransaction();
 
 

@@ -1,4 +1,5 @@
 <link rel="stylesheet" href="../css/product.css">
+<?php require_once ('../templates/redirect_if_not_logged_in.php')?>
 <?php
 include "../templates/header.php";
 require "../PHP code/functions.php";

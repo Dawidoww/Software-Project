@@ -1,4 +1,5 @@
 <link rel="stylesheet" href="../css/controlpanel.css"/>
+
 <?php
 require "../PHP code/functions.php";
 if (isset($_GET["userID"])) {
