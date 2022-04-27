@@ -1,5 +1,5 @@
 <?php require_once('../templates/header.php'); ?>
-<?php require_once ('../templates/redirect_if_not_logged_in.php')?>
+<?php require_once('../SRC/redirect_if_not_logged_in.php') ?>
 <link rel="stylesheet" href="../css/homepage.css"/>
 <div class="page">
     <div class="box1">
@@ -12,11 +12,11 @@
 
     <div class="box2">
         <h1>About us</h1>
-<p> Established in 2022. We Provide customers  with a
-    fitness plan that will help them reach any fitness goals they would like to achieve,
-    that being losing weight, gaining weight, gaining strength, or just getting into shape,
-    Critical Fitness website will be able to provide that. This website is suitable for all ages groups.</p>
-    <br>
+        <p> Established in 2022. We Provide customers  with a
+            fitness plan that will help them reach any fitness goals they would like to achieve,
+            that being losing weight, gaining weight, gaining strength, or just getting into shape,
+            Critical Fitness website will be able to provide that. This website is suitable for all ages groups.</p>
+        <br>
         <br>
         <br>
         <h2>Buy a plan just with 5 clicks</h2>
@@ -31,3 +31,4 @@
     </div>
 </div>
 <?php require_once('../templates/footer.php'); ?>
+

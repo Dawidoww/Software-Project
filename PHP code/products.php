@@ -1,5 +1,5 @@
 <link rel="stylesheet" href="../css/product.css">
-<?php require_once ('../templates/redirect_if_not_logged_in.php')?>
+<?php require_once('../SRC/redirect_if_not_logged_in.php') ?>
 <?php
 include "../templates/header.php";
 require "../PHP code/functions.php";
@@ -34,11 +34,11 @@ try {
 <table class="container_item">
     <thead>
         <tr>
-            <th>Plan Name</th>
-            <th>Plan Type</th>
-            <th>Description</th>
-            <th>Price</th>
-            <th>Action</th>
+            <th class="a">Plan Name</th>
+            <th class="b">Plan Type</th>
+            <th class="c">Description</th>
+            <th class="d">Price</th>
+            <th class="e">Action</th>
         </tr>
     </thead>
     <form method="post">

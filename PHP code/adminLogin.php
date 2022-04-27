@@ -1,4 +1,5 @@
 <?php
+session_start();
 require_once('../templates/header.php'); ?>
 <link rel="stylesheet" href="../css/login.css"/>
 <title>Sign in as Personal Trainer</title>
@@ -19,12 +20,12 @@ require_once('../templates/header.php'); ?>
             require_once '../SRC/connectDB.php';
             require_once '../PHP code/Classes/User.php';
 
-            //$sql = "INSERT INTO personaltrainer(trainerName) VALUES ('admin@gmail.com')";
-            $sql = "SELECT * FROM personaltrainer";
+            //$sql = "INSERT INTO personaltrainer(trainerName) VALUES ('admin@criticalfitness.com')";
+            $sql = "SELECT trainerName FROM personaltrainer";
             $trainerName = $_POST['trainerName'];
             $statement = $connection->prepare($sql);
-    //        $statement->bindParam(':email', $email, PDO::PARAM_STR);
-      //      $statement->bindParam(':password', $password, PDO::PARAM_STR);
+    //       $statement->bindParam(':email', $email, PDO::PARAM_STR);
+      //     $statement->bindParam(':password', $password, PDO::PARAM_STR);
             $statement->execute();
             $result = $statement->fetchAll();
         }

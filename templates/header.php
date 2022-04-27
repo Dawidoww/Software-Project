@@ -1,5 +1,5 @@
 <?php
-session_start();
+//session_start();
 //if($_SESSION['Active'] == false){
 //header("location:login.php");
 //exit;} ?>
@@ -21,7 +21,7 @@ session_start();
     <nav>
         <label class="logo">Critical Fitness</label>
         <ul>
-            <li><a href="../PHP code/test1.php">Home</a></li>
+            <li><a href="../PHP code/home.php">Home</a></li>
             <li><a href="../PHP code/login.php">Login</a></li>
             <li><a href="../PHP code/register.php">Register</a></li>
             <li><a href="../PHP code/products.php">Products</a></li>

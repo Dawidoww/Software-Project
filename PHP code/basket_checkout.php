@@ -2,6 +2,7 @@
 <?php
 require_once '../templates/header.php';
 require "../PHP code/functions.php";
+require_once('../SRC/redirect_if_not_logged_in.php');
 $total = 0;
 ?>
 
@@ -67,17 +68,17 @@ try {
     </tbody>
     <thead>
     <tr>
+        <th>Discount: <input name="discount" type="text" id="discount" placeholder="Enter Discount"><button name="apply" value="Apply" class="apply_button" type="submit">Apply</button></th>
         <th>Total: <?php
             $total = number_format($total, 2);
             ?>
             $ <?= $total ?></th>
     </tr>
+
     </thead>
 </table>
 <form method="post">
-    <div class="Out">
-        <a href="OrderDetails.php"><button name="submit" value="CheckOut" class="button" type="submit">CheckOut</button></a><br>
-    </div>
+    <a href="OrderDetails.php"><button name="submit" value="CheckOut" class="button" type="submit">CheckOut</button></a><br>
 </form>
 <?php require "../templates/footer.php"; ?>
 

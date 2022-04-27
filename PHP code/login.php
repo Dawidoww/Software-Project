@@ -1,5 +1,7 @@
 <?php
 require_once('../templates/header.php'); ?>
+<?php require_once('../SRC/redirect_if_user_active.php') ?>
+<script>alert("Please Log In")</script>
 <link rel="stylesheet" href="../css/login.css"/>
 <title>Sign in as Customer</title>
 <div class="container1">
@@ -43,9 +45,8 @@ require_once('../templates/header.php'); ?>
         if ($result && $statement->rowCount() > 0) {
             ?><?php
             $_SESSION['email'] = $email;
-            $_SESSION['email'] = $email;
             $_SESSION['Active'] = true;
-            header("location:test1.php");
+            header("location:home.php");
             exit;
         }
         else { ?> <h4>Incorrect Email or Password</h4>

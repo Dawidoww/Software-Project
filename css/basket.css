@@ -19,7 +19,7 @@ body
 }
 .container_item thead tr
 {
-    background-color: #009879;
+    background-color: red;
     color: #ffffff;
     text-align: left;
     font-weight: bold;
@@ -50,14 +50,28 @@ h2{
 }
 .container_item tbody tr:last-of-type
 {
-    border-bottom: 2px solid #009879;
+    border-bottom: 2px solid red;
 }
 .container_item tbody tr.active-row
 {
     font-weight: bold;
-    color: #009879;
+    color: red;
 }
-button{
+input
+{
+    padding:5px 5px 5px 0;
+}
+.apply_button
+{
+    padding: 6px 6px 6px 0;
+    width: 15%;
+    background-color: white;
+    color: black;
+    font-weight: bold;
+    cursor: pointer;
+}
+.button{
+    left: 40px;
     width: 40%;
     background-color: white;
     border: 2px solid black;
