@@ -5,13 +5,14 @@ require "../PHP code/functions.php";
 require_once('../SRC/redirect_if_not_logged_in.php');
 $total = 0;
 ?>
-
-<div class="action"></div>
 <?php
 if (isset($_POST["submit"])) {
     try {
         require_once '../SRC/connectDB.php';
-        $sql = "INSERT INTO `order`(shipEmail,planName,amount) VALUES ('dawidoww15@gmail.com','Power Up',21.99)";
+        //$sql = "INSERT INTO `order`(shipEmail,planName,amount) VALUES ('dawidoww15@gmail.com','Power Up',49.99)";
+        $sql = "INSERT INTO `order`(shipEmail,planName,amount) VALUES ('dawidoww15@gmail.com','The Weight Blaster',39.99)";
+        //$sql = "INSERT INTO `order`(shipEmail,planName,amount) VALUES ('dawidoww15@gmail.com','Titan Mode',44.99)";
+        //$sql = "INSERT INTO `order`(shipEmail,planName,amount) VALUES ('dawidoww15@gmail.com','Transform',54.99)";
         $statement = $connection->prepare($sql);
         $statement->execute();
         $success = "Order Created";
@@ -46,6 +47,22 @@ try {
     echo $sql . "<br>" . $error->getMessage();
 }
 ?>
+<?php
+ //   if(isset($_POST["apply"])){
+ //       try {
+ //           require_once '../SRC/connectDB.php';
+ //           $sql = "SELECT promoCode FROM promo WHERE promoCode = :promoCode";
+ //           $promoCode = $_POST['discount'];
+ //           $statement = $connection->prepare($sql);
+ //          $statement->bindParam(':discount', $promoCode, PDO::PARAM_STR);
+ //           $statement->execute();
+ //           $result = $statement->fetchAll();
+ //       } catch(PDOException $error) {
+ //           echo $sql . "<br>" . $error->getMessage();
+ //       }
+ //   }
+
+?>
 <h2>Basket</h2>
 <?php if ($success) echo $success; ?>
 <table class="container_item">
@@ -60,26 +77,33 @@ try {
     <?php foreach ($result as $row) : ?>
         <tr>
             <td><?php echo escape($row["planName"]); ?></td>
-            <td><?php echo escape($row["amount"]); ?></td>
+            <td>$<?php echo escape($row["amount"]); ?></td>
             <td><a href="basket_checkout.php?planName=<?php echo escape($row["planName"]);
                 ?>">Delete</a></td>
         </tr>
-    <?php endforeach; ?>
+
     </tbody>
     <thead>
     <tr>
-        <th>Discount: <input name="discount" type="text" id="discount" placeholder="Enter Discount"><button name="apply" value="Apply" class="apply_button" type="submit">Apply</button></th>
-        <th>Total: <?php
+        <th>Total:<?php
             $total = number_format($total, 2);
             ?>
-            $ <?= $total ?></th>
+            $<?= $total = $total + $row["amount"];?></th>
+        <?php endforeach; ?>
+        <th>Discount: <input name="discount" type="text" id="discount" placeholder="Enter Discount">
+            <form method="post">
+                <button name="apply" value="Apply" class="apply_button" type="submit">Apply</button></form></th>
     </tr>
-
     </thead>
+        <tr>
+            <th>
+                <form method="post" class="checkout">
+                    <a href="OrderDetails.php"><button name="submit" value="CheckOut" class="button" type="submit">CheckOut</button></a><br>
+                </form>
+            </th>
+        </tr>
 </table>
-<form method="post">
-    <a href="OrderDetails.php"><button name="submit" value="CheckOut" class="button" type="submit">CheckOut</button></a><br>
-</form>
+
 <?php require "../templates/footer.php"; ?>
 
 

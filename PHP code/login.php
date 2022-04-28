@@ -1,7 +1,6 @@
 <?php
 require_once('../templates/header.php'); ?>
 <?php require_once('../SRC/redirect_if_user_active.php') ?>
-<script>alert("Please Log In")</script>
 <link rel="stylesheet" href="../css/login.css"/>
 <title>Sign in as Customer</title>
 <div class="container1">

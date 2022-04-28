@@ -12,7 +12,10 @@ if (isset($_POST['Submit'])) {
         //    $basket->setAmount(49.99);
         //   $basket->setPlanName('Power Up');
         //   $basket->AddItem();
-        $sql = "INSERT INTO basket(amount,planName) VALUES ( 21.99,'Power Up' )";
+        //$sql = "INSERT INTO basket(amount,planName) VALUES ( 49.99,'Power Up' )";
+        $sql = "INSERT INTO basket(amount,planName) VALUES ( 39.99,'The Weight Blaster' )";
+        //$sql = "INSERT INTO basket(amount,planName) VALUES ( 44.99,'Titan Mode' )";
+        //$sql = "INSERT INTO basket(amount,planName) VALUES ( 54.99,'Transform' )";
         $statement = $connection->prepare($sql);
         $statement->execute();
     } catch(PDOException $error) {

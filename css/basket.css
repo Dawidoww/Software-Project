@@ -71,9 +71,7 @@ input
     cursor: pointer;
 }
 .button{
-    left: 40px;
-    width: 40%;
-    background-color: white;
+    width: 400%;
     border: 2px solid black;
     color: black;
     padding: 5px 5px 5px 0;

@@ -1,6 +1,5 @@
 <link rel="stylesheet" href="../css/order.css">
 <?php require "../templates/header.php"; ?>
-<?php require_once('../SRC/redirect_if_not_logged_in.php') ?>
 <?php
 require "../PHP code/functions.php";
 try {
