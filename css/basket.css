@@ -28,6 +28,8 @@ body
 .container_item th, .container_item td
 {
     padding: 12px 15px;
+    font-family: "Arial Black", Gadget, sans-serif;
+    font-size: 20px;
 }
 .container_item tbody tr
 {
@@ -37,6 +39,7 @@ h2{
     text-align: center;
     font-size: 30px;
     color: #eeeeee;
+
 }
 .container_item tbody tr:nth-of-type(even)
 {
@@ -71,7 +74,7 @@ input
     cursor: pointer;
 }
 .button{
-    width: 400%;
+    width: 100%;
     border: 2px solid black;
     color: black;
     padding: 5px 5px 5px 0;

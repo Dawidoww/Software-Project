@@ -5,11 +5,11 @@
         <form method="post">
             <h2 class="form-register-heading">Payment</h2>
             <label1 for="cardNumber">Card Number</label1>
-            <input type="text" name="cardNumber" id="cardNumber" placeholder="xxxx-xxxx-xxxx-xxxx" >
+            <input type="text" name="cardNumber" id="cardNumber" placeholder="xxxx-xxxx-xxxx-xxxx" required>
             <label1 for="type">Card Type</label1>
             <input type="text" name="type" id="type" placeholder="VISA OR MASTERCARD" required >
             <label1 for="cvv">CVV</label1>
-            <input type="text" name="cvv" id="cvv" placeholder="xxx" >
+            <input type="text" name="cvv" id="cvv" placeholder="xxx" required>
             <br><br>
             <button name="submit" value="Pay now" class="button" type="submit">Pay Now</button>
         </form>

@@ -55,7 +55,8 @@ h2{
 .container_item tbody tr.active-row
 {
     font-weight: bold;
-    color: red;
+    color: black;
+
 }
 button{
     width: 40%;

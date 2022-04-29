@@ -7,9 +7,9 @@ require_once('../templates/header.php'); ?>
     <form action="" method="post" name="Login_Form" class="form-signin">
         <h2 class="form-signin-heading">Login</h2>
         <label1 for="email" >Email&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label1>
-        <input name="email" type="email" id="email" placeholder="email" >
+        <input name="email" type="email" id="email" placeholder="email" required>
         <label1 for="inputPassword">Password&nbsp;</label1>
-        <input name="password" type="password" id="inputPassword" placeholder="Password" ><br><br>
+        <input name="password" type="password" id="inputPassword" placeholder="Password" required><br><br>
         <button name="submit" value="Login" class="button" type="submit">Sign in</button><br>
     </form>
     <br>
