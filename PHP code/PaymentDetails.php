@@ -40,12 +40,24 @@
                 );
                 $statement = $connection->prepare($sql);
                 $statement->execute($new_Card);
-                header("location:confirmation.php");
+               // header("location:confirmation.php");
             } catch(PDOException $error) {
                 //     echo $sql . "<br>" . $error->getMessage();
             }
         }
         ?>
+
+        <?php
+        if (isset($_POST['submit'])) {
+            try {
+                require_once '../SRC/connectDB.php';
+                $sql = "INSERT INTO transactions(transactionID,amount) VALUES (1,39.99 )";
+                $statement = $connection->prepare($sql);
+                $statement->execute();
+            } catch(PDOException $error) {
+                echo $sql . "<br>" . $error->getMessage();
+            }
+        }?>
 
         <?php
         if ($_SERVER["REQUEST_METHOD"] == "POST"){?>

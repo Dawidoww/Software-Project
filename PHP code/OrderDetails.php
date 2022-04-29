@@ -1,5 +1,6 @@
 <link rel="stylesheet" href="../css/order.css">
-<?php require "../templates/header.php"; ?>
+<?php require "../templates/header.php";
+require_once('../SRC/redirect_if_not_logged_in.php') ?>
 <?php
 require "../PHP code/functions.php";
 try {
@@ -14,12 +15,16 @@ try {
 ?>
 <?php
 if (isset($_POST['Pay'])) {
+
     try {
         header('location:PaymentDetails.php');
     } catch(PDOException $error) {
         echo $sql . "<br>" . $error->getMessage();
     }
 }?>
+
+
+
 <?php if ($success) echo $success; ?>
 <div class="container_item">
     <h2>Order</h2>

@@ -48,7 +48,7 @@ class PaymentTest
             $this->addError('type','Type of card cannot be empty');
         }
         else {
-            if($val != "VISA" OR "MASTERCARD"){
+            if($val != "VISA" || "MASTERCARD"){
                 $this->addError('type', 'Type of card must be a Valid type and capital letters');
             }
         }
