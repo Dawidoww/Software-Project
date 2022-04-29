@@ -1,20 +1,47 @@
 <?php
 
-
 use PHPUnit\Framework\TestCase;
 
 class BasketTest extends TestCase
 {
 
-    public function testGetPlanName()
+    public function testReturnGetPlanName()
     {
+        require '../PHP code/Classes/Basket.php';
 
-    $this -> assertSame($this->testGetPlanName());
+        $plan = new Plan;
+
+        $plan -> planName = "Powerlifting";
+
+        $this->assertEquals('Powerlifting', $plan->getPlanName());
     }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
     public function testAddItem()
     {
-    $this -> assertSame($this->testAddItem());
+
     }
 
     public function testSetPlanName()
